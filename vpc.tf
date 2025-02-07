@@ -1,5 +1,9 @@
 module "vpc" {
-    source = "../10-terraform-aws-vpc"
+    #source = "../10-terraform-aws-vpc"
+
+# To refer module code from git instead of local
+    #source = "github.com/DAWS-2025-82S/10-terraform-aws-vpc"
+    source = "git::https://github.com/DAWS-2025-82S/10-terraform-aws-vpc.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     vpc_cidr = var.vpc_cidr
